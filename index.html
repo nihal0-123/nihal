@@ -22,7 +22,9 @@
 <header>
     <nav>
         <div class="left">NIHAL,s PORTFOLIO</div>
-        <div class="right">
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+            
+        <div class="right" id ="nav-links"> 
             <ul> 
                 <li>
                     <span class="material-symbols-outlined">home</span>
@@ -140,10 +142,19 @@
 <!-- Typed.js Animation -->
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
+
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.right ul');
+
+    toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
     var typed = new Typed('#element', {
         strings: ['Programmer', 'Frontend Developer', 'Cybersecurity Enthusiast'],
         typeSpeed: 40,
     });
+    
 </script>
 
 </body>
